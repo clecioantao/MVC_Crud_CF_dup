@@ -1,0 +1,64 @@
+﻿@model MVCcodfirst4.Models.Pessoa
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade.NomeCidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.NomeCidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado.NomeEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado.NomeEstado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementoPessoa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

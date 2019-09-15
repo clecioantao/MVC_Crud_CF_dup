@@ -1,0 +1,58 @@
+﻿@model MVCcodfirst4.Models.Pessoa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade.NomeCidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.NomeCidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado.NomeEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado.NomeEstado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementoPessoa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PessoaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
